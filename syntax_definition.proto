@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package learning;
+
+//service definition
+service HandShake {
+  // Sends a greeting
+  rpc DoingHandShake (RequestMessage) returns (ReplyMessage) {}
+}
+
+//sender send a string message
+message RequestMessage {
+  string message = 1;
+}
+
+//the server send a message response
+message ReplyMessage {
+  string message = 1;
+}
